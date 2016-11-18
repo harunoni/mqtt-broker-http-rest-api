@@ -24,6 +24,9 @@
       "no-unused-vars": 1
     }
   },
+  "repository" : { "type" : "git"
+  , "url" : "https://github.com/patrickgao0922/mqtt-broker-http-rest-api.git"
+  },
   "author": "Patrick Gao <patrickgao0922@gmail.com>",
   "license": "ISC",
   "dependencies": {
