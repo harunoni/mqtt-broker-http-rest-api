@@ -1,0 +1,11 @@
+{
+  "name": "mqtt-broker-http-rest-api",
+  "version": "1.0.0",
+  "description": "This is a Node.js project setting up RESTful service for mobile application sending HTTP request to MQTT broker.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Patrick Gao <patrickgao0922@gmail.com>",
+  "license": "ISC"
+}
