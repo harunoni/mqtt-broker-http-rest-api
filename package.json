@@ -2,7 +2,7 @@
   "name": "mqtt-broker-http-rest-api",
   "version": "1.0.0",
   "description": "This is a Node.js project setting up RESTful service for mobile application sending HTTP request to MQTT broker.",
-  "main": "index.js",
+  "main": "dist",
   "scripts": {
     "dev": "NODE_ENV=development nodemon -w src --exec \"babel-node src --presets es2015,stage-0\"",
     "build": "babel src -s -D -d dist --presets es2015,stage-0",
