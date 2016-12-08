@@ -1,6 +1,7 @@
 import mongoose from 'mongoose'
 import { Router } from 'express'
 import Command from '../model/command'
+import http from 'http'
 
 export default({config,db}) => {
     let api = Router()
@@ -15,6 +16,15 @@ export default({config,db}) => {
         newCommand.c = req.body.c
 
         // Send request to HTTP server
-        
+
+        // Save command to mongodb
+        newCommand.save(err => {
+            if (error) {
+                req.send(err)
+            }
+            res.json({message: 'Command saved sucessfully'})
+        })
     })
+
+    return api
 }
