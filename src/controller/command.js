@@ -4,14 +4,19 @@ import Command from '../model/command'
 import http from 'http'
 
 export default({config,db}) => {
+
+
     let api = Router()
+
+    api.use()
 
     //CRUD 
     
     // '/v1/command/add'send command to device - Create
-    api.post('add', (req, res) => {
+    api.post('/add', (req, res) => {
         let newCommand = new Command()
         newCommand.n = req.body.n
+        console.log(req.body)
         newCommand.d = req.body.d
         newCommand.c = req.body.c
 
@@ -19,7 +24,7 @@ export default({config,db}) => {
 
         // Save command to mongodb
         newCommand.save(err => {
-            if (error) {
+            if (err) {
                 req.send(err)
             }
             res.json({message: 'Command saved sucessfully'})

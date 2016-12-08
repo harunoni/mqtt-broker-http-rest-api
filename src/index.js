@@ -10,12 +10,16 @@ let app = express()
 app.server = http.createServer(app)
 
 // middleware
+app.use(bodyParser.json({
+    limit: config.bodyLimit
+}))
 
 // passport config
 
 // api routes v1
 app.use('/v1',routes)
 app.server.listen(config.port)
+// app.server.listen(3005)
 console.log(`Started on port ${app.server.address().port}`)
 
 export default app
