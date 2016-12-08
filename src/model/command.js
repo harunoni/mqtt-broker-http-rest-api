@@ -1,8 +1,10 @@
 import mongoose from 'mongoose'
 
 
-let Schema = new Schema ({
-    n: String
-    d: String
-    c: String
+let commandSchema = new Schema ({
+    n: String,
+    d: String,
+    c: String,
 })
+
+module.exports = mongoose.model('Command', commandSchema)
