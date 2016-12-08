@@ -1,5 +1,7 @@
 import mongoose from 'mongoose'
 
+let Schema = mongoose.Schema
+
 
 let commandSchema = new Schema ({
     n: String,

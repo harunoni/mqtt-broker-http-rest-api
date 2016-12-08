@@ -16,6 +16,6 @@ app.server = http.createServer(app)
 // api routes v1
 app.use('/v1',routes)
 app.server.listen(config.port)
-console.log('Started on port ${app.server.address().port}')
+console.log(`Started on port ${app.server.address().port}`)
 
 export default app
