@@ -10,6 +10,8 @@ export default({config,db}) => {
 
     api.use()
 
+
+
     //CRUD 
     
     // '/v1/command/add'send command to device - Create
